@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DomainLayer;
+using PrettyHair.Business;
 
 namespace GuiLayer.Views
 {
@@ -20,9 +22,16 @@ namespace GuiLayer.Views
     /// </summary>
     public partial class OrderView : UserControl
     {
+        BusinessFacade Controler;
         public OrderView()
         {
             InitializeComponent();
+            
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -5,12 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GuiLayer.Views"
              xmlns:Domain="clr-namespace:DomainLayer;assembly=DomainLayer"
+             xmlns:viewModel="clr-namespace:GuiLayer.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="430" d:DesignWidth="300">
+
     <Canvas>
-        <Button Canvas.Left="10" x:Name="btnBack" Content="Back" Width="50" Height="30" Canvas.Bottom="10" Canvas.Top="390"/>
-        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Customer" Width="200" Height="30" Canvas.Bottom="10" Canvas.Left="90" Canvas.Top="390" />
-        <TextBox x:Name="txtSearch" Height="30" Canvas.Left="10" TextWrapping="Wrap" Text="Search" Canvas.Top="10" Width="280" VerticalContentAlignment="Center" FontSize="18" TextChanged="txtSearch_TextChanged"/>
+        <!--<Canvas.DataContext>-->
+        <!--<viewModel:CustomerViewModel />
+        </Canvas.DataContext>-->
+        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Customer" Width="280" Height="30" Canvas.Bottom="10" Canvas.Left="10" Canvas.Top="391" Click="BtnAdd_Click" />
+        <TextBox x:Name="txtSearch" Height="30" Canvas.Left="10" TextWrapping="Wrap" Text="Search" Canvas.Top="10" Width="280" VerticalContentAlignment="Center" FontSize="18"/>
         <DataGrid x:Name="dataGrid" Canvas.Left="10" Canvas.Top="45" Height="340" Width="280"/>
     </Canvas>
 </UserControl>
