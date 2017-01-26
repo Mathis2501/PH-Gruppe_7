@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="430" d:DesignWidth="300">
     <Canvas>
-        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Order" Width="280" Height="30" Canvas.Bottom="10" Canvas.Left="10" Canvas.Top="391" Click="BtnAdd_Click" />
+        <Button Canvas.Right="20" x:Name="BtnAdd" Content="Add Product" Width="280" Height="30" Canvas.Bottom="10" Canvas.Left="10" Canvas.Top="391" Click="BtnAdd_Click" />
         <TextBox x:Name="txtSearch" Height="30" Canvas.Left="10" TextWrapping="Wrap" Text="Search" Canvas.Top="10" Width="280" VerticalContentAlignment="Center" FontSize="18"/>
         <DataGrid x:Name="dataGrid" Canvas.Left="9.6" Canvas.Top="44.8" Height="340" Width="280"/>
     </Canvas>

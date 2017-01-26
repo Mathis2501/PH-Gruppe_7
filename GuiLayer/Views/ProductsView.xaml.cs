@@ -27,15 +27,19 @@ namespace GuiLayer.Views
         {
             Controler = BusinessFacade.GetInstance;
             InitializeComponent();
-
-            List<Product> Liste = Controler.ShowProduct();
-            dataGrid.ItemsSource = Liste;
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             AddProduct AddProd = new AddProduct();
             AddProd.ShowDialog();
+            Refresh();
+        }
+
+        private void Refresh()
+        {
+            List<Product> Liste = Controler.ShowProduct();
+            dataGrid.ItemsSource = Liste;
         }
     }
 }

@@ -33,5 +33,11 @@ namespace GuiLayer.Views
         {
             
         }
+
+        //private void Refresh()
+        //{
+        //    List<Order> Liste = Controler.ShowOrders();
+        //    dataGrid.ItemsSource = Liste;
+        //}
     }
 }
