@@ -24,5 +24,11 @@ namespace GuiLayer.Views
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct AddProd = new AddProduct();
+            AddProd.ShowDialog();
+        }
     }
 }
