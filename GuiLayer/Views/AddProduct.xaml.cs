@@ -24,6 +24,7 @@ namespace GuiLayer.Views
         private BusinessFacade Controller;
         public AddProduct()
         {
+            Controller = BusinessFacade.GetInstance;
             InitializeComponent();
         }
 
@@ -36,7 +37,7 @@ namespace GuiLayer.Views
         {
             int i;
             double d;
-            if (!string.IsNullOrEmpty(textBoxName.Text) && !string.IsNullOrEmpty(textBoxPrice.Text) && !string.IsNullOrEmpty(textBoxDescription.Text) && !string.IsNullOrEmpty(textBoxAmount.Text))
+            if (!string.IsNullOrEmpty(textBoxName.Text) && !string.IsNullOrEmpty(textBoxPrice.Text) && !string.IsNullOrEmpty(textBoxAmount.Text))
             {
                 if (int.TryParse(textBoxAmount.Text, out i) && double.TryParse(textBoxPrice.Text, out d))
                 {
