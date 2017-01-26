@@ -21,7 +21,7 @@ namespace GuiLayer.Views
     {
         public AddProduct()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }
