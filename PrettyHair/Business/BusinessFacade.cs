@@ -7,7 +7,7 @@ namespace PrettyHair.Business
 {
     public class BusinessFacade
     {
-        
+        List<Product> productList = new List<Product>();
         private static volatile BusinessFacade instance;
 
         private static object synchronizationRoot = new Object();
@@ -56,6 +56,18 @@ namespace PrettyHair.Business
             }
 
             return custList;
+        }
+        public List<Product> ShowProduct()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                productList.Add(new Product("name"+i, 1 + i, "sejt" + i, 1 + i));
+            }
+            return productList;
+        }
+        public void SaveProduct(Product prod)
+        {
+            productList.Add(prod);
         }
     }
 }

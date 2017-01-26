@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PrettyHair.Business;
+using DomainLayer;
 
 namespace GuiLayer.Views
 {
@@ -20,9 +22,14 @@ namespace GuiLayer.Views
     /// </summary>
     public partial class ProductsView : UserControl
     {
+        BusinessFacade Controler;
         public ProductsView()
         {
+            Controler = BusinessFacade.GetInstance;
             InitializeComponent();
+
+            List<Product> Liste = Controler.ShowProduct();
+            dataGrid.ItemsSource = Liste;
         }
     }
 }
