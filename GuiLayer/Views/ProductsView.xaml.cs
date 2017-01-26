@@ -31,5 +31,11 @@ namespace GuiLayer.Views
             List<Product> Liste = Controler.ShowProduct();
             dataGrid.ItemsSource = Liste;
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct AddProd = new AddProduct();
+            AddProd.ShowDialog();
+        }
     }
 }

@@ -26,13 +26,14 @@ namespace GuiLayer.Views
 
         public AddCustomer()
         {
-            //InitializeComponent();
+            Controller = BusinessFacade.GetInstance;
+            InitializeComponent();
         }
 
         private void btn_Add_Click(object sender, RoutedEventArgs e)
         {
             int i;
-            if (string.IsNullOrEmpty(textBox.Text) && string.IsNullOrEmpty(textBox1.Text) && string.IsNullOrEmpty(textBox2.Text) && string.IsNullOrEmpty(textBox3.Text))
+            if (!string.IsNullOrEmpty(textBox.Text) && !string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text))
             {
                 if (int.TryParse(textBox3.Text, out i))
                 {
@@ -41,9 +42,6 @@ namespace GuiLayer.Views
                     this.Hide();
                 }
             }
-            
-
-            
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
