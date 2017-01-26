@@ -22,18 +22,20 @@ namespace GuiLayer.Views
     /// </summary>
     public partial class ProductsView : UserControl
     {
+        List<Product> Liste;
         BusinessFacade Controler;
         public ProductsView()
         {
             Controler = BusinessFacade.GetInstance;
             InitializeComponent();
 
-            List<Product> Liste = Controler.ShowProduct();
+            Liste = Controler.ShowProduct();
             dataGrid.ItemsSource = Liste;
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
+            
             AddProduct AddProd = new AddProduct();
             AddProd.ShowDialog();
         }
